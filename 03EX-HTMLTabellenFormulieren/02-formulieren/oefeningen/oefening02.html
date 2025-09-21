@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Keuzelijsten</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <h1>Maak de juiste keuze.</h1>
+    <form action="mailto:celine.deboth@hogent.be?subject=Keuzes" method="post" enctype="text/plain">
+        <div>
+            <label for="serie">Kies je favoriete serie:</label>
+            <select name="serie" id="serie">
+                <option value="Thrones">Game Of Thrones</option>
+                <option value="Peaky">Peaky Blinders</option>
+                <option value="Papel">Casa de Papel</option>
+                <option value="Baby">Baby</option>
+                <option value="Vikings">Vikings</option>
+            </select>
+        </div>
+        <div>
+            <label for="lector">Kies je favoriete lector:</label>
+            <input list="lectors" id="lector" name="lector">
+            <datalist id="lectors">
+                <option value="Karine Samyn">Karine Samyn</option>
+                <option value="Stefaan Samyn">Stefaan Samyn</option>
+                <option value="Lotte Vansteenberghe">Lotte Vansteenberghe</option>
+                <option value="Stefaan De Cock">Stefaan De Cock</option>
+            </datalist>
+        </div>
+        <div>
+            <button type="submit">Maak je keuze</button>
+        </div>
+    </form>
+</body>
+
+</html>

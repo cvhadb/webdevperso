@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOL.COM Registratie</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <header>
+        <h1>Nieuw bij bol.com</h1>
+        <p>Ben je een zakelijke klant?
+            Maak dan een hieronder zakelijk account aan, met extra voordelen voor zakelijke klanten.
+        </p>
+    </header>
+    <hr>
+    <main>        
+        <h2>Accountgegevens</h2>
+        <form action="mailto:celine.deboth@hogent.be?subject=Registratie" method="post" enctype="text/plain">
+            <fieldset>
+                <legend>Persoonlijke gegevens</legend>
+                <div>
+                    Aanhef <sup>*</sup>
+                    <input type="radio" name="Aanhef" id="sex" value="Mevrouw" required checked>
+                    <label for="sex">Mevrouw</label>
+                    <input type="radio" name="Aanhef" id="sex" value="De heer" required>
+                    <label for="sex">De heer</label>
+                </div>
+                <div>
+                    <label for="vnaam">Voornaam<sup>*</sup></label>
+                    <input type="text" name="Voornaam" id="vnaam" required>
+                    <label for="anaam">Achternaam<sup>*</sup></label>
+                    <input type="text" name="Achternaam" id="anaam" required>
+                </div>
+                <div>
+                    <label for="bnaam">Bedrijfsnaam</label>
+                    <input type="text" name="Bedrijfsnaam" id="bnaam">
+                </div>
+                <div>
+                    <label for="plaats">Code en gemeente<sup>*</sup></label>
+                    <input type="text" name="Gemeente" id="plaats">
+                </div>
+                <div>
+                    <label for="straat">Straatnaam<sup>*</sup></label>
+                    <input type="text" name="Straatnaam" id="straat" required>
+                    <label for="nummer">Huisnummer en bus<sup>*</sup></label>
+                    <input type="text" name="Huisnummer" id="nummer" required>
+                </div>
+                <div>
+                    <label for="land">Land<sup>*</sup></label>
+                    <select name="Land" id="land" required>
+                        <option value="">--Maak een keuze--</option>
+                        <option value="België">België</option>
+                        <option value="Frankrijk">Frankrijk</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="extra">Extra adresregel (optioneel) </label>
+                    <input type="text" name="Extra" id="extra">
+                </div>
+                <div>
+                    <label for="dob">Geboortedatum (optioneel)</label>
+                    <input type="date" name="Geboortedatum" id="dob">
+                </div>
+                <div>
+                    <label for="tel">Telefoonnummer <sup>*</sup></label>
+                    <input type="tel" id="tel" name="Tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Inloggegevens</legend>
+                <div>
+                    <label for="email">E-mailadres<sup>*</sup></label>
+                    <input type="text" name="Email" id="email" placeholder="naam@provider.com" required>
+                </div>
+                <div>
+                    <label for="pass">Wachtwoord<sup>*</sup></label>
+                    <input type="password" name="Wachtwoord" id="pass" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Blijf op de hoogte</legend>
+                <table>
+                    <th>Nieuwsbrief</th>
+                    <th>Blijf per e-mail op de hoogte van:</th>
+                    <tr>
+                        <td><input type="checkbox" name="Consent1" id="info">
+                    <label for="info">Informatie rondom je aankoop</label></td>
+                        <td>Reviewverzoeken, artikelsuggesties, en informatie over onze artikelen</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="Consent2" id="promo" checked>
+                    <label for="promo">Persoonlijke aanbevelingen en acties</label></td>
+                        <td>Reviewverzoeken, artikelsuggesties, en informatie over onze artikelen</td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <div><button type="submit">Verzenden</button></div>
+        </form>
+
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+:root {
+    /* The size of a block that makes up the world of Mario */
+    --block-size: 16px;
+    /* How far Mario will walk (in blocks) */
+    --steps: 18;
+    /* How long it takes to walk a single block */
+    --step-time: 0.3s;
+    /* How long Mario should wait before starting his walk */
+    --delay: 2s;
+}
+
+body {
+    /* The body should cover the entire viewport */
+    height: 100vh;
+    margin: 0;
+
+    /* Center the world in the viewport */
+    display: block flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#world {
+    /* The world image is 27x15 blocks in size */
+    width: calc(27 * var(--block-size));
+    height: calc(15 * var(--block-size));
+    background-image: url(images/world.png);
+
+    /* Mario will be positioned relative to the world */
+    position: relative;
+
+    /* Draw the world at 2x scale */
+    transform: scale(2);
+}
+
+#mario {
+    /* Mario is exactly one block in size */
+    width: var(--block-size);
+    height: var(--block-size);
+    background-image: url(images/mario.png);
+
+    /* Mario's starting position */
+    position: absolute;
+    left: calc(2 * var(--block-size));
+    bottom: calc(2 * var(--block-size));
+
+    animation-name: move;
+    animation-duration: calc(var(--steps) * var(--step-time));
+    animation-delay: var(--delay);
+    animation-timing-function: linear;
+    /* The fill mode is set to forwards so Mario will stay at his final location. */
+    animation-fill-mode: forwards;
+}
+
+/* The move animation slides Mario from left to right over the desired distance */
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(var(--steps) * var(--block-size)));
+    }
+}

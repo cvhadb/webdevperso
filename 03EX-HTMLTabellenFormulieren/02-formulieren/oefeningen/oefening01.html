@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aanmelden</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <h1>Aanmelden.</h1>
+    <form action="mailto:celine.deboth@hogent.be?subject=Aanmelden" method="post" enctype="text/plain">
+        <div>
+            <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="naam@server.com" required>
+        </div>
+        <div>
+            <label for="pass">Wachtwoord:</label>
+        <input type="password" id="pass" name="password" required>
+        </div>
+        <div>
+            <label for="logged">Aangemeld blijven:</label>
+        <input type="checkbox" id="logged" name="permanent">
+        </div>
+        <div>
+            <button type="submit">Meld je aan</button>
+        </div>
+        
+    </form>
+</body>
+
+</html>

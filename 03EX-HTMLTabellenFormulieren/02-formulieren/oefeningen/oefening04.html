@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registreer.</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <h1>Registreer.</h1>
+    <form action="mailto:celine.deboth@hogent.be?subject=Registreer" method="post" enctype="text/plain">
+        <div>
+            <label for="naam">Naam:</label>
+            <input type="text" name="naam" id="naam" required>
+        </div>
+        <div>
+            <label for="voornaam">Voornaam:</label>
+            <input type="text" name="vnaam" id="voornaam" required>
+        </div>
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div>
+            <label for="bd">Geboortedatum:</label>
+            <input type="date" name="gebdatum" id="gb">
+        </div>
+        <div>
+            <label for="nl">Abonneren op nieuwsbrief:</label>
+            <input type="checkbox" name="news" id="nl">
+        </div>
+        <div>
+            <label for="pb">Ik ga akkoord met het privacybeleid:</label>
+            <input type="checkbox" name="privacy" id="pb">
+        </div>
+        <div><button type="submit">Registreer</button>
+        <button type="reset">Clear</button></div>
+    </form>
+</body>
+
+</html>

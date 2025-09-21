@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Poll</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <h1>Poll.</h1>
+    <form action="mailto:celine.deboth@hogent.be?subject=Poll" method="post" enctype="text/plain">
+        
+        <fieldset>
+            <legend>Ik volg Web Development I</legend>
+
+            <div>
+                <input type="radio" id="campus1" name="les" value="0830-1000Campus" />
+                <label for="campus1">Op de campus van 08:30 tot 10:00</label>
+            </div>
+
+            <div>
+                <input type="radio" id="campus2" name="les" value="1100-1230Campus" />
+                <label for="campus2">Op de campus van 11:00 tot 12:30</label>
+            </div>
+
+            <div>
+                <input type="radio" id="online" name="les" value="1100-1230Online" />
+                <label for="online">Online van 11:00 tot 12:30</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Examen Web Development I</legend>
+
+            <div>
+                <input type="radio" id="campuslap" name="examen" value="CampusLaptop" />
+                <label for="campuslap">Op de campus op laptop</label>
+            </div>
+
+            <div>
+                <input type="radio" id="expo" name="examen" value="FlandersExpo" />
+                <label for="expo">In Flanders Expo - Schriftelijk</label>
+            </div>
+
+            <div>
+                <input type="radio" id="online" name="examen" value="onLine" />
+                <label for="online">Online op laptop</label>
+            </div>
+
+            <div>
+                <input type="radio" id="onlineM" name="examen" value="onLineM" />
+                <label for="onlineM">Online mondeling</label>
+            </div>
+
+        </fieldset>
+
+        <button type="submit">Verstuur</button><button type="reset">Clear</button>
+
+    </form>
+
+</body>
+
+</html>
