@@ -1,16 +1,62 @@
 <!DOCTYPE html>
 <html lang="nl">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bestel een pizza</title>
-        <link href="css/style.css" type="text/css" rel="stylesheet" />
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestel een pizza</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+</head>
 
-    <body>
+<body>
+    <form action="mailto:celine@db.com?subject=info" method="post">
+        <fieldset>
+            <legend>Plaats bestelling</legend>
+            <label for="name">Naam: </label>
+            <input type="text" name="Naam" id="name" placeholder="vul hier je naam in" required>
+            <br><br>
+            <label for="kleur">Kleur: </label>
+            <input type="color" name="Kleur" id="kleur">
+            <br><br>
+            <label for="levering">Uur levering: </label>
+            <input type="radio" value="1618" name="levering">16-18u
+            <input type="radio" value="1820" name="levering" checked>18-20u
+            <input type="radio" value="2022" name="levering">20-22u
+            <br><br>
+            <label for="number">Number: </label>
+            <input type="number" name="Number" id="number" min="5" max="25">
+            <br><br>
+            <label for="password">Password: </label>
+            <input type="password" name="Password" id="password">
+            <br><br>
+            <label for="email">Email: </label>
+            <input type="email" name="Email" id="email">
+            <br><br>
+            <input type="checkbox" name="extras" id="extras" value="kaas" checked>kaas
+            <input type="checkbox" name="extras" id="extras" value="hesp">hesp
+            <br><br>
+            <select name="pizza" id="pizza" multiple required>
+                <option value="ananas" selected>met ananas</option>
+                <option value="napolitano">napolitano</option>
+            </select>
+            <br><br>
+            <label for="bezorgers">Kies je bezorger: </label>
+            <input list="bezorgers" id="bezorger" name="bezorger">
+            <datalist id="bezorgers">
+                <option value="Stef"></option>
+                <option value="Sammy"></option>
+                <option value="Stijn"></option>
+            </datalist>
+            <br><br>
+            <label for="extra">Extra informatie: </label>
+            <textarea name="extra" id="extra"></textarea>
+            <br><br>
+            <input type="submit" value="Verstuur">
+        </fieldset>
 
-    </body>
+    </form>
+
+</body>
 
 </html>
