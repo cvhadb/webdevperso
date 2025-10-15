@@ -18,6 +18,9 @@ Hou onder andere rekening met onderstaande richtlijnen:
       laatste rij:
         tekstkleur: #395870; 
         vet
+
+
+        DEZE OEFENING WAS NIET GOED !! HERMAKEN
 */
 
 body {
@@ -27,10 +30,56 @@ body {
 
 table {
   border-collapse: collapse;
-
+  color: #4a4a4d;
 }
 
 th, td {
   border: 1px solid #cecfd5;
   padding: 10px 15px;
+}
+
+thead { /* foutje : thead en niet th */
+  background-color: #395870;
+  color: white;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+tbody tr:nth-child(even) {
+background-color: #f0f0f2;
+}
+
+table strong {
+  color : #395870
+}
+
+table span {
+  color : #7c7c80;
+  font-size: 12px;
+}
+
+th:first-child {
+  text-align: left;
+}
+
+th:last-child {
+  text-align: right;
+}
+
+td:last-child {
+  text-align: right;
+}
+
+tbody td:nth-child(2), 
+tbody td:nth-child(3) {
+  text-align: center;
+}
+
+tfoot td {
+  text-align: right;
+}
+
+tfoot tr:last-child {
+  color : #395870;
+  font-weight: bold;
 }
