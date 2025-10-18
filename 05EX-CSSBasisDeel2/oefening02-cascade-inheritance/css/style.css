@@ -15,9 +15,10 @@ Noteer telkens: kleur - css selector - specificity. Rangschik vervolgens de lijs
 
 Controleer of jouw lijst overeenkomt met deze in de Developer Tools.
 
-
-
-
+rood, .red, 010
+blauw, ul li li, 003
+groen, ul li, 002
+geel, li, 001
 
 
 
@@ -26,7 +27,7 @@ Vraag 2: (Multiple choice)
   Beschouw de li-elementen in het nav-element. Hoe krijgen deze elementen hun waarde
   voor de CSS-eigenschap list-style-type?
     1. via de cascade
-    2. via inheritance
+    2. via inheritance x
     3. ze krijgen hun initial value
   Tip Maak gebruik van de Developer Tools
 
@@ -35,9 +36,9 @@ Vraag 3: (Multiple choice)
 *******
   Beschouw het ul-element in het nav-element. Hoe verkrijgt dit element zijn waarde
   voor de CSS-eigenschap list-style-type?
-    1. via de cascade
+    1. via de cascade x
     2. via inheritance
-    3. het krijgt zijn initial value
+    3. het krijgt zijn initial value 
   Tip Maak gebruik van de Developer Tools
 
 */

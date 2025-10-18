@@ -1,0 +1,20 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+div {
+    margin : 1em 0 1em 0;
+}
+
+div:first-of-type {
+    border : 1px solid black
+}
+
+div:nth-of-type(2) {
+    border : 1px solid black;
+    padding: 10px;
+    margin: 40px;
+}

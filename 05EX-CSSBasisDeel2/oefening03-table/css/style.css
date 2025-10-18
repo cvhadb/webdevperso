@@ -15,4 +15,8 @@ table, td, th {
   border-collapse: collapse;
 }
 
+td, .spec-living {
+  color: red;
+}
+
 

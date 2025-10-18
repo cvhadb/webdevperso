@@ -1,0 +1,21 @@
+ /* OPNIEUW DOEN!!!! */
+ 
+ html {
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+} 
+
+main {
+  /* Flexible width */
+  width: 80%;
+
+  /* Maximum width for readability */
+  max-width: 840px;
+
+  /* Centers the content */
+  margin-left: auto;
+  margin-right: auto;
+}

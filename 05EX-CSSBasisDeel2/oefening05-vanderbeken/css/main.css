@@ -1,14 +1,18 @@
 /* Algemeen */
 /* ******** */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-
+  font-family: 'Roboto', sans-serif;
   color: #111;
 }
 
 /* Stel de regelhoogte voor de paragrafen en de lijsten in op 1.5.
 Zo krijgen we een beetje meer ruimte tussen de regels.*/
 
+p, li {
+  line-height: 1.5;
+}
 
 
 
@@ -21,23 +25,32 @@ Zo krijgen we een beetje meer ruimte tussen de regels.*/
       tekstkleur: wit
       */
 
+nav {
+  background-color: #393939;
+}
 
-
-
-
+footer {
+  background-color: #ed1c24;
+  color: white;
+}
 
 
 
 /* algemene opmaak voor de hyperlinks:
 een rode tekstkleur en geen onderstreping */
 
-
+a {
+  color: red;
+  text-decoration: none;
+}
 
 
 /* Als er gehoverd wordt over een link 
 dan moet die onderstreept worden */
 
-
+a:hover {
+  text-decoration: underline;
+}
 
 
 /* Navigatiebalk*/
@@ -51,7 +64,22 @@ dan moet die onderstreept worden */
    met class current) deze is rood en niet onderstreept.
    */
 
+nav {
+  font-size: 1.2em;
+}
 
+nav ul {
+  list-style-type: none;
+}
+
+nav a {
+  color: white;
+}
+
+nav a.current {
+  color: red;
+  text-decoration: none;
+}
 
 
 
@@ -70,15 +98,21 @@ td {
 /* De eerste tabelrij krijgt:
   - achtergrondkleur: #424242
   - tekstkleur: white
+  OPGELET!!!!!!
   */
 
+tr:first-child th {
+  background-color: #424242;
+  color: white;
+}
 
 
+  /* De tekst is in alle cellen gecentreerd 
+  OPGELET!!!*/
 
-
-  /* De tekst is in alle cellen gecentreerd */
-
-
+td {
+  text-align: center;
+}
 
 
 /* formulier */
@@ -90,7 +124,11 @@ als bij de eerste tabel-rij:
   - tekstkleur: white 
 */
 
-
+input[type="submit"] {
+  font-size: 1.2em;
+  background-color: #424242;
+  color: white;
+}
 
 
 

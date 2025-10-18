@@ -1,5 +1,19 @@
+/* perfect */
 span {
     font-weight: bold;
     border: 1px solid blue;
     background-color: lightblue;
+    display: block;
+  }
+
+  span:first-of-type {
+    /* visibility: hidden; */
+    color: black;
+  }
+
+  span:nth-of-type(2) {
+    /* visibility: hidden;
+    display: none; */
+    width: 100px;
+    height: 50px;
   }
