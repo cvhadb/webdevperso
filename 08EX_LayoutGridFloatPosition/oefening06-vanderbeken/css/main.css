@@ -1,3 +1,7 @@
+/* OPLOSSING*/
+@import url(normalize.css);
+
+
 /* import Google font Roboto */
 /* ************************* */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
@@ -5,9 +9,17 @@
 /* Algemeen */
 /* ******** */
 
+/*  */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: #111;
+
+  /* OPLOSSING*/
+  background-color: #525252;  
 }
 
 /* Stel de regelhoogte voor de paragrafen en de lijsten in op 1.5.
@@ -31,6 +43,12 @@ nav {
 footer {
   background-color: #ed1c24;
   color: white;
+}
+
+/*  */
+header,
+main {
+  background-color: #fff;
 }
 
 /* algemene opmaak voor de hyperlinks:
@@ -80,13 +98,67 @@ nav .current {
 /* Page Layout */
 /**************/
 
+/* OPLOSSING*/
+/* beetje padding links en rechts voor header, main en footer.*/
+header,
+main,
+footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* OPLOSSING*/
+/* de witruimte bij header en footer aanpassen */
+header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+footer p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
 
 
+/* OPLOSSING*/
+.container {
+  /* container centreren en 
+  breedte beperken tot 960px */
+  max-width: 960px;
+  margin: 0 auto;
+}
 
+/* OPLOSSING*/
+/* CSS-grid layout aanpassen naar twee kolommen */
+.container {
+  display: grid;
+  grid-template-columns: 20ch 1fr;
+  grid-template-areas:
+    'header header '
+    'nav    main   '
+    'nav    main   '
+    'footer footer ';
 
+  gap: 3px;
+}
+header {
+  grid-area: header;
+}
+footer {
+  grid-area: footer;
+}
+nav {
+  grid-area: nav;
+}
+main {
+  grid-area: main;
+}
 
-
-
+/* OPLOSSING*/
+/* kleur van de gap kunnen we instellen door de .container
+een achtergrondkleur te geven */
+.container {
+  background-color: grey;
+}
 
 /* Tabellen */
 /************/

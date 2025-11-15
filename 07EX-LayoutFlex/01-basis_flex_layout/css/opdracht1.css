@@ -1,3 +1,4 @@
+/* prima */
 html {
   box-sizing: border-box;
 }
@@ -14,3 +15,7 @@ html {
 }
 
 /* Plaats je oplossing hieronder */
+.flex-container {
+  display: block flex;
+  flex-direction: row-reverse;
+}

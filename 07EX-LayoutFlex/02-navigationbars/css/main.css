@@ -1,12 +1,17 @@
+/* disaster disaster disaster */
 body {
   padding: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 nav {
   max-width: 960px;
+  
 }
 nav ul {
   border: 1px solid #000;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 nav a {
   text-decoration: none;
@@ -18,4 +23,33 @@ nav a {
   display: block;
   padding: 10px;
   margin: 10px;
+}
+
+#nav1 ul {
+  display: block flex;
+  justify-content: space-between;
+}
+
+#nav2 ul {
+  display: block flex;
+}
+
+#nav2 li {
+  flex: auto;
+}
+
+#nav3 ul {
+  display: block flex;
+}
+
+#nav3 li {
+  flex: 1;
+}
+
+#nav4 ul {
+  display: block flex;
+}
+
+#nav4 li:last-child {
+  margin-inline-start: auto;
 }

@@ -1,3 +1,4 @@
+/* perfect!! vergeet niet flex op 1 te zetten bij de "standaard" items */
 html {
   box-sizing: border-box;
 }
@@ -11,6 +12,18 @@ html {
   border: 1px solid #000;
   background-color: lightgreen;
   padding: 10px;
+  flex : 1;
 }
 
 /* Plaats je oplossing hieronder */
+.flex-container {
+  display: block flex;
+}
+
+.flex-container > div:first-child {
+  flex: 2;
+}
+
+.flex-container > div:last-child {
+  flex: 2;
+}

@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html lang="fr" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Audrey Margaux Renom-De Both</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Inter', Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        padding: 0;
+        background: white;
+        position: relative;
+      }
+
+      .cv-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 297mm;
+      }
+
+      .header {
+        background-color: #2d5016;
+        color: white;
+        padding: 30px 40px;
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 2.2em;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      .header .subtitle {
+        font-size: 1.1em;
+        font-weight: 400;
+        opacity: 0.9;
+      }
+
+      .main-content {
+        display: flex;
+        flex: 1;
+      }
+
+      .sidebar {
+        width: 35%;
+        background-color: #f5e6d3;
+        padding: 30px 25px;
+      }
+
+      .content {
+        width: 65%;
+        padding: 30px 35px;
+        background: white;
+      }
+
+      .photo-placeholder {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px auto;
+        border: 3px solid #2d5016;
+        overflow: hidden;
+      }
+
+      .photo-placeholder img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .section {
+        margin-bottom: 25px;
+      }
+
+      .section-title {
+        color: #2d5016;
+        font-size: 1.1em;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        padding-bottom: 6px;
+        border-bottom: 2px solid #2d5016;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        font-size: 0.9em;
+      }
+
+      .contact-item i {
+        width: 18px;
+        margin-right: 10px;
+        color: #2d5016;
+      }
+
+      .skills-list,
+      .interests-list,
+      .languages-list {
+        list-style: none;
+      }
+
+      .skills-list li,
+      .interests-list li,
+      .languages-list li {
+        padding: 4px 0;
+        font-size: 0.9em;
+        position: relative;
+        padding-left: 15px;
+        list-style: none;
+      }
+
+      .skills-list li:before,
+      .interests-list li:before,
+      .languages-list li:before {
+        content: '•';
+        color: #2d5016;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+      }
+
+      .content .section-title {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+      }
+
+      .profile-text {
+        text-align: justify;
+        line-height: 1.7;
+        margin-bottom: 25px;
+        font-size: 0.95em;
+      }
+
+      .experience-item {
+        margin-bottom: 20px;
+      }
+
+      .job-title {
+        font-weight: 600;
+        color: #2d5016;
+        font-size: 1.05em;
+      }
+
+      .job-period {
+        color: #666;
+        font-size: 0.9em;
+        font-style: italic;
+      }
+
+      .job-company {
+        color: #666;
+        font-size: 0.9em;
+        margin-bottom: 8px;
+      }
+
+      .job-description {
+        margin-bottom: 6px;
+        font-size: 0.95em;
+      }
+
+      .job-tasks {
+        list-style: none;
+        margin-top: 8px;
+      }
+
+      .job-tasks li {
+        padding: 2px 0;
+        padding-left: 15px;
+        position: relative;
+        font-size: 0.9em;
+        list-style: none;
+      }
+
+      .job-tasks li:before {
+        content: '•';
+        color: #2d5016;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+      }
+
+      .education-item {
+        margin-bottom: 15px;
+      }
+
+      .education-title {
+        font-weight: 600;
+        color: #2d5016;
+      }
+
+      .education-period {
+        color: #666;
+        font-size: 0.9em;
+        font-style: italic;
+      }
+
+      .education-school {
+        color: #666;
+        font-size: 0.9em;
+      }
+    </style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Open%20Sans:wght@400&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Noto%20Sans%20JP:wght@400&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&amp;display=swap" rel="stylesheet"></head>
+  <body style="">
+    <div class="cv-container">
+      <div class="header">
+        <h1><span style="color: rgb(204, 204, 204);">Audrey Margaux Renom-De Both</span></h1>
+        <div class="subtitle">Job étudiant</div>
+      </div>
+
+      <div class="main-content">
+        <div class="sidebar">
+          <div class="photo-placeholder">
+            <img src="https://page.gensparksite.com/v1/base64_upload/e3dd4bbf131723eb21c1c7d3fc9daaf2" alt="Photo d'Audrey Margaux Renom-De Both" data-height-listener-added="true">
+          </div>
+
+          <div class="section">
+            <h3 class="section-title">Coordonnées</h3>
+            <div class="contact-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>Overwinningstraat 14<br>1560 Hoeilaart</span>
+            </div>
+            <div class="contact-item">
+              <i class="bi bi-telephone-fill"></i>
+              <span>0456255936</span>
+            </div>
+            <div class="contact-item">
+              <i class="bi bi-envelope-fill"></i>
+              <span>arenomdeboth@icloud.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="bi bi-calendar-fill"></i>
+              <span>01/11/2008</span>
+            </div>
+            <div class="contact-item">
+              <i class="bi bi-flag-fill"></i>
+              <span>Belge</span>
+            </div>
+            <div class="contact-item">
+              <i class="bi bi-bicycle"></i>
+              <span>Vélo et transports en commun</span>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3 class="section-title">Compétences</h3>
+            <ul class="skills-list">
+              <li>Communication</li>
+              <li>Organisée</li>
+              <li>Créative</li>
+              <li>Sociable</li>
+              <li>Débrouillarde</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h3 class="section-title">Centre d'intérêts</h3>
+            <ul class="interests-list">
+              <li>Arts créatifs</li>
+              <li>Passion pour le théâtre</li>
+              <li>Photographie</li>
+              <li>Art</li>
+              <li>Écologie</li>
+              <li>Cuisine</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h3 class="section-title">Langues</h3>
+            <ul class="languages-list">
+              <li>Français - langue maternelle</li>
+              <li>Néerlandais - langue maternelle</li>
+              <li>Anglais - courant</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="section">
+            <h2 class="section-title">Profil</h2>
+            <p class="profile-text">
+              Bonjour, j'aimerais travailler comme vendeuse, je vis à Hoeilaart et je peux facilement me déplacer en vélo
+              ou transports en commun. Je suis ponctuelle, organisée, sociable et responsable. J'ai été bénévole pour la
+              Main Tendue à Namur, j'ai également été baby-sitter pendant les dernières deux années, et pour finir,
+              animatrice à plusieurs reprises pour des anniversaires d'enfants de 5 à 9 ans. Je suis disponible les
+              week-ends et les mercredis et vendredis après-midis et soirs.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Expérience</h2>
+
+            <div class="experience-item">
+              <div class="job-title">Animatrice</div>
+              <p class="job-description">
+                Animation d'ateliers, de jeux, spectacles et soirées à thème dans une atmosphère conviviale et
+                stimulante lors d'anniversaires.
+              </p>
+              <ul class="job-tasks">
+                <li>Prise en charge d'un groupe d'une dizaine d'enfants âgés de 5 à 8 ans</li>
+                <li>Préparation d'activités divers</li>
+              </ul>
+            </div>
+
+            <div class="experience-item">
+              <div class="job-title">Babysitter <span class="job-period">07/2023 - Actuel</span></div>
+              <div class="job-company">Divers - Hoeilaart, La Hulpe</div>
+              <ul class="job-tasks">
+                <li>
+                  Garde d'enfants régulière ou ponctuelle d'enfants âgés de 5 à 10 ans pendant les vacances, événements,
+                  soirées et week-ends
+                </li>
+                <li>Nettoyage et rangement du matériel utilisé avec les enfants après chaque activité</li>
+                <li>Aide aux enfants pour le bain, l'habillage, la toilette et le coucher</li>
+                <li>Organisation, préparation et encadrement des repas</li>
+                <li>Aide aux devoirs scolaires : apprentissage des leçons, exercices</li>
+              </ul>
+            </div>
+
+            <div class="experience-item">
+              <div class="job-title">Bénévole <span class="job-period">01/2024 - 07/2024</span></div>
+              <div class="job-company">La Main Tendue - Namur - Stage</div>
+              <ul class="job-tasks">
+                <li>
+                  Réalisation de diverses tâches manuelles selon les besoins opérationnels, comme trier des aliments et
+                  déplacer caisses de fruits et légumes
+                </li>
+                <li>Distribution de repas aux sans-abri lors d'événements organisés</li>
+                <li>Participation au nettoyage et à l'entretien des espaces</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Formation</h2>
+            <div class="education-item">
+              <div class="education-title">Photographie <span class="education-period">09/2021 - En cours</span></div>
+              <div class="education-school">Institut d'Enseignement des Arts, Techniques, Artisanats - Namur</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body></html>

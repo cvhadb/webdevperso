@@ -1,3 +1,4 @@
+/* complete disaster.... */
 html {
   box-sizing: border-box;
 }
@@ -19,3 +20,6 @@ html {
 }
 
 /* Plaats je oplossing hieronder */
+.flex-container {
+  justify-content:center;
+}

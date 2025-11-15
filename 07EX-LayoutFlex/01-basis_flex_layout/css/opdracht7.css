@@ -1,3 +1,4 @@
+/* complete failure - do again */
 html {
   box-sizing: border-box;
 }
@@ -14,3 +15,10 @@ html {
 }
 
 /* Plaats je oplossing hieronder */
+.flex-container {
+  display: block flex;
+}
+
+#item2 {
+  margin-inline-end: auto;
+}

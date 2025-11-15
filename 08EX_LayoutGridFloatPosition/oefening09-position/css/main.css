@@ -1,3 +1,5 @@
+/* disaster */
+
 * {
   box-sizing: border-box;
 }
@@ -12,6 +14,7 @@ main {
   width: 752px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 /* Message box */
@@ -22,12 +25,25 @@ main {
 }
 
 .message-box {
+  position: absolute;
   width: 400px;
   height: 150px;
+  left: 176px;
+  top: 150px;
   padding: 10px;
 }
 
 .close-button {
   width: 2rem;
   height: 2rem;
+  right: -1rem;
+  top: -1rem;
+  position: absolute;
 }
+
+main {
+  display: grid;
+  justify-items: center;
+  
+}
+
