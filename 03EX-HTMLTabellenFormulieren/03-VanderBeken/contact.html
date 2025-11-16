@@ -79,7 +79,7 @@
         Vul volgend formulier in om een afspraak te maken (Naam - email -
         telefoon zijn verplicht)
       </p>
-      <form action="afspraak.php" method="get">
+      <form action="afspraak.php" method="post" enctype="application/x-www-form-urlencoded">
         <div>
           <label for="name">Naam & voornaam</label>
           <input type="text" id="name" name="Name" placeholder="Naam en voornaam" required>

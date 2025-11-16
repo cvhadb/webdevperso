@@ -1,12 +1,5 @@
-html {
-    box-sizing: border-box;
-}
-
-*, ::before, ::after {
-    box-sizing: inherit;
-}
 div {
-    margin : 1em 0 1em 0;
+    margin : 1em 0;
 }
 
 div:first-of-type {
