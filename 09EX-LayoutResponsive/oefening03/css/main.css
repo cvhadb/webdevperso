@@ -83,3 +83,22 @@ footer nav div ul {
 .box3 {
   display: none;
 }
+
+/* OPLOSSING */
+@media screen and (min-width:720px) {
+  .box2 {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .fotos>* {
+    flex-basis: 25%;
+  }
+
+  .box3 {
+    display: block;
+    text-align: center;
+  }
+}

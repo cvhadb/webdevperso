@@ -1,3 +1,7 @@
+#grootte::before {
+    content: "mobiel ";
+}
+
 body {
     display: block flex;
     height: 100vh;
@@ -10,6 +14,33 @@ p {
     margin: auto;
 }
 
-#grootte::before {
-    content: "mobiel ";
+@media screen and (min-width: 480px) {
+    #grootte::before {
+        content: "tablet ";
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #grootte::before {
+        content: "klein ";
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #grootte::before {
+        content: "groot ";
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #grootte::before {
+        content: "zeer groot ";
+    }
+}
+
+@media screen and (orientation: landscape) {
+    body {
+        color: white;
+        background-color: orangered;
+    }
 }

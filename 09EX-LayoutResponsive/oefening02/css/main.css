@@ -49,3 +49,24 @@ nav {
   grid-row: 3;
   justify-self: center;
 }
+
+@media screen and (orientation: portrait) {
+  #container {
+    grid-template-areas:  "title stats"
+                          "score stats"
+                          "board board"
+                          "ctrls ctrls";
+  }
+}
+
+@media screen and (orientation: portrait) and(max-width:500px) {
+  #container {
+    grid-template-areas:  "title score"
+                          "board board"
+                          "ctrls ctrls";
+  }
+
+#stats {
+  display: none;
+}
+}

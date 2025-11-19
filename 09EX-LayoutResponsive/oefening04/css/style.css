@@ -25,3 +25,29 @@
      padding: 0.5rem;
      border: 2px solid lightskyblue;
    }
+
+   @media screen and (min-width:700px) {
+  article {
+    display: block flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .event-image {
+    width: 45%;
+  }
+
+  .event-text {
+    width: 53%;
+  }
+
+  h1 {
+    color: mediumpurple;
+    font-size: 3.5em;
+  }
+
+  article {
+    border: 2px solid mediumpurple;
+  }
+}
