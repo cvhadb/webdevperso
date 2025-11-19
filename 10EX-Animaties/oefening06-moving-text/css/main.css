@@ -13,6 +13,19 @@ body {
   background-color: lightsteelblue;
 }
 
+.container p {
+  /* animatie klaarzetten, maar pauzeren */
+  animation-name: moving-text;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+/* gepauzeerde animatie starten */
+.container:hover p {
+  animation-play-state: running;
+}
+
 @keyframes moving-text {
   0% {
     transform: translate(0, 0);

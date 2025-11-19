@@ -1,0 +1,93 @@
+/*****************/
+/* DROPDOWN_MENU */
+/*****************/
+
+/* reset ul:
+     verwijderen bullets en witruimtes bij hoofdmenu en submenu's */
+.dropdown-menu,
+.dropdown-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* hyperlinks in hoofdmenu */
+.dropdown-menu > li > a {
+  font-size: 1.2rem;
+  color: #222;
+  display: block;
+  padding: 10px 7px;
+  cursor: default;
+  text-decoration: underline;
+}
+
+/* hyperlinks in submenu */
+.dropdown-menu ul a {
+  color: #444;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* bij het hoveren over een submenu-item
+de kleuren van het item wijzigen */
+.dropdown-menu ul li:hover a {
+  background-color: #006fb8;
+  color: white;
+}
+
+/* Het submenu van randen voorzien:         
+      Als we de border-eigenschap gebruiken om de submenu's een rand te 
+      geven blijft de rand zichtbaar als we de hoogte instellen op nul.
+      We maken bijgevolg de borders met de volgende truk:
+        - we maken de achtergrond van het submenu grijs 
+        - we maken de achtergrond van de hyperlinks wit
+        - en geven de hyperlinks een marge van 1px. Daar marges 
+          standaard transparant zijn, lijkt het hierdoor 
+          alsof het submenu borders heeft. */
+.dropdown-menu ul {
+  background-color: darkgrey;
+}
+.dropdown-menu ul a {
+  background-color: #fff;
+  margin: 1px;
+}
+
+/* lay-out dropdown-menu */
+.dropdown-menu {
+  display: block flex;
+}
+.dropdown-menu ul {
+  position: absolute; /* submenu uit de 'normal flow' halen */
+}
+
+/* submenu verbergen */
+.dropdown-menu ul {
+  max-height: 0px;
+  overflow: hidden;
+  /* transitie achterwaarts */
+  transition: max-height 200ms;
+}
+
+/* het submenu weergeven bij het hoveren over een hoofdmenu-item */
+.dropdown-menu li:hover ul {
+  /* transitie voorwaarts */
+  transition: max-height 500ms;
+  /* 165px is in principe voldoende */
+  max-height: 200px;
+}
+
+/* grijze achtergrondkleur toevoegen en onderstreping verwijderen
+bij het hoveren over een hoofdmenu-item. */
+.dropdown-menu > li:hover > a {
+  background-color: #ddd;
+  text-decoration: none;
+}
+
+/* extra witruimte links van de hyperlinks in het hoofdmenu,
+behalve bij het eerste item */
+.dropdown-menu > li + li {
+  margin-left: 20px;
+}
+
+  

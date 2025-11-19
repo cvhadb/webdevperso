@@ -2,46 +2,138 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vraag 1</title>
-    <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- De titel voor de webpagina is Vraag 1 -->
+  <title>Vraag 1</title>
+  <!-- Leg een koppeling vanuit de Home page naar de CSS -->
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
-    <h2>feedback ep3</h2>
-    <table>
-        <caption>Beschikbaarheid lectoren</caption>
+  <header>
+    <h1>Feedback EP3</h1>
+  </header>
+  <main>
+    <!-- Voeg tabel en afbeeldingen samen in een section-tag. -->
+    <section>
+      <table>
+        <colgroup>
+          <col>
+          <!-- de andere kolommen zullen de resterende breedte gelijk verdelen. -->
+          <col span="4">
+        </colgroup>
         <thead>
-        <tr>
+          <tr>
             <th>OLOD</th>
             <th>9:00-9:30</th>
             <th>9:30-10:00</th>
             <th>10:00-10:30</th>
             <th>10:30-11:00</th>
-        </tr></thead>
+          </tr>
+        </thead>
         <tbody>
-        <tr>
+          <tr>
             <td rowspan="2">OOSD II</td>
             <td>Leen Vuyghe</td>
             <td colspan="2">Stefaan Samyn</td>
             <td>Leen Vuyghe</td>
-        </tr>
-        <tr>
-            <td colspan="2">Lotte Vansteenberghe</td>
+          </tr>
+          <tr>
+            <td colspan="2">Lotte Van Steenberghe</td>
             <td colspan="2">Sharon Van Hove</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td rowspan="2">Web Development I</td>
             <td colspan="3">Stefaan De Cock</td>
             <td>Patrick Lauwaerts</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td colspan="2">Karine Samyn</td>
             <td colspan="2">Chloë De Leenheer</td>
-        </tr></tbody>
-    </table>
-
+          </tr>
+        </tbody>
+        <caption>Beschikbaarheid lectoren</caption>
+      </table>
+      <!-- Voeg de afbeeldingen van de lectoren toe. 
+       De afbeeldingen moeten steeds onder de tabel komen te staan-->
+      <div class="image-row">
+        <div>
+          <img src="images/SS.jpg" alt="Stefaan Samyn">
+        </div>
+        <div>
+          <img src="images/KS.jpg" alt="Karine Samyn">
+        </div>
+        <div>
+          <img src="images/LV.jpg" alt="Leen Vuyghe">
+        </div>
+        <div>
+          <img src="images/PL.jpg" alt="Patrick Lauwaerts">
+        </div>
+        <div>
+          <img src="images/SDC.jpg" alt="Stefaan De Cock">
+        </div>
+        <div>
+          <img src="images/CDL.jpg" alt="Chloë De Leenheer">
+        </div>
+        <div>
+          <img src="images/LVS.jpg" alt="Lotte Van Steenberghe">
+        </div>
+        <div>
+          <img src="images/SVH.jpg" alt="Sharon Van Hove">
+        </div>
+      </div>
+    </section>
+    <!-- Voeg het HTML-formulier ‘Maak je reservatie’ toe. -->
+     <!-- Wanneer de gebruiker klikt op de knop Reserveer moeten de formulierwaarden 
+      doorgestuurd worden naar het script feedback.php op de server via de http method GET. -->
+    <form action="feedback.php" method="get">
+      <fieldset>
+        <legend>Maak je reservatie</legend>
+        <!-- Zowel de naam – voornaam als het e-mail input veld zijn verplicht. -->
+        <div>
+            <!-- Zorg ervoor dat indien er op het label wordt geklikt, het inputveld focus krijgt. -->
+          <label for="naam">Naam:</label>
+          <input type="text" name="name" id="naam" placeholder="Naam en voornaam" required>
+        </div>
+        <!-- Zowel de naam – voornaam als het e-mail input veld zijn verplicht. -->
+        <div>
+          <label for="email">E-mail:</label>
+          <input type="email" name="name" id="email" placeholder="E-mail" required>
+        </div>
+        <!-- Indien de checkbox OOSD II aangevinkt is verschijnt de selectlist. -->
+        <div>
+          <label for="oosd2" class="cb">OOSD II:</label>
+          <input type="checkbox" name="oosd2" id="oosd2">
+          <select name="lectoroosd2">
+            <!-- De mogelijke waarden voor deze selectlist zijn: 
+             Stefaan Samyn, Lotte Van Steenberghe, Leen Vuyghe, Sharon Van Hove. -->
+            <option value="SS">Stefaan Samyn</option>
+            <option value="HR">Lotte Van Steenberghe</option>
+            <option value="LV">Leen Vuyghe</option>
+            <option value="SVH">Sharon Van Hove</option>
+          </select>
+        </div>
+        <!-- Indien de checkbox Web Dev I aangevinkt is verschijnt de selectlist. -->
+        <div>
+          <label for="web1" class="cb">Web Development I:</label>
+          <input type="checkbox" name="web1" id="web1">
+          <select name="lectorweb1">
+            <!-- De mogelijke waarden voor deze zijn: 
+             Stefaan De Cock, Patrick Lauwaerts, Karine Samyn, Chloë De Leenheer. -->
+            <option value="SDC">Stefaan De Cock</option>
+            <option value="PL">Patrick Lauwaerts</option>
+            <option value="KS">Karine Samyn</option>
+            <option value="CDL">Chloë De Leenheer</option>
+          </select>
+        </div>
+        <div>
+          <input type="submit" value="Reserveer">
+        </div>
+      </fieldset>
+    </form>
+  </main>
 </body>
 
 </html>

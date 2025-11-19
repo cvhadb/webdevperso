@@ -16,11 +16,29 @@
         background-color: dodgerblue;
         color: white;
         font-size: x-large;
+
+        /* tekst centreren */
+        display: block grid;
+        align-items: center;
+        justify-items: center;
+
+        /* animatie starten */
+        animation: rotating 2s linear infinite;
+      }
+
+      @keyframes rotating {
+        0% {
+          /* standaard is het rotatie-punt het centerpunt */
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
       }
     </style>
   </head>
   <body>
     <h1>rotate</h1>
-    <div>Vinyl</div>
+    <div>Ulysse</div>
   </body>
 </html>

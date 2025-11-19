@@ -1,3 +1,4 @@
+/* Stel voor alle elementen box-sizing in op border-box */
 html {
     box-sizing: border-box;
 }
@@ -6,46 +7,178 @@ html {
     box-sizing: inherit;
 }
 
+/* Gebruik als font stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif. */
+/* De regelhoogte is 1,7 */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.7;
 }
 
-h2 {
+/* De lettergrootte voor de hoofding Feedback EP3 is 3 rem en gecentreerd 
+en de omzetting naar hoofdletters moet je via CSS uitvoeren */
+h1 {
     font-size: 3rem;
     text-align: center;
     text-transform: uppercase;
     border-bottom: 1px solid black;
 }
 
+/* Voorzie ook 10 pixels witruimte rechts van en onder de tabel */
+/* Op kleine schermen moet deze section de volledige breedte van het 
+scherm innemen, maar deze mag nooit kleine worden dan 800px. 
+Hier zal het formulier dan visueel onder de sectie geplaatst worden */
+main {
+    display: grid;
+    grid-template-columns: minmax(800px, 1fr);
+    gap: 10px;
+    grid-template-areas:    "a"
+                            "b";
+}
+
+/* Het formulier moet naast de tabel komen (bij een groot scherm). 
+Op schermen die groter dan 1100px zijn komen de twee naast elkaar te liggen.
+Hierbij moet de section 800px innemen en zal het formulier de resterende breedte innemen*/
+@media screen and (min-width: 1100px) {
+    main {
+        grid-template-areas:
+            "a b";
+        grid-template-columns: 800px 1fr;
+    }
+}
+
+/* Deze images op een rij nemen dezelfde breedte in als de tabel erboven. */
+/* Er moet een witruimte van 5px tussen de images zijn. */
+.image-row {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+/* Deze images op een rij nemen dezelfde breedte in als de tabel erboven. */
+/* deelt de resterende vrije ruimte van de container in gelijke delen */
+.image-row > div {
+    flex: 1 0 0;
+}
+
+section {
+    grid-area: a;
+}
+
+form {
+    grid-area: b;
+}
+
+/* zorg ervoor dat de afbeeldingen als een cirkel worden weergegeven. */
+/* De afbeelding moet verkleinen en vergroten als de viewport wijzigt, zodat de volledige breedte opgevuld is. */
+img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+/* OPMAAK TABEL */
 table {
+    width: 100%;
     border-collapse: collapse;
 }
 
+/* Alle cellen hebben een ‘lightgrey’ rand van 2 pixels en de afstand tussen de tekst 
+en de randen is 5 pixels. 
+De namen van de lectoren zijn gecentreerd.*/
+th, td {
+    padding: 5px;
+    border: 2px solid lightgray;
+    text-align: center;
+}
+
+/* De eerste kolom heeft een breedte van 250px */
+/* Zie html voor "de andere kolommen zullen de resterende breedte gelijk verdelen." */
+col {
+    width: 250px;
+}
+
+/* De gebruikte achtergrondkleuren in de tabel zijn: de eerste kolom: lightskyblue */
+col:first-child {
+    background-color: lightskyblue;
+}
+
+/* De tekstkleur voor het tabel bijschrift ‘Beschikbaarheid lectoren’ is ‘grey’ 
+en 1.5rem groot en het bijschrift moet boven de tabel geplaatst worden. */
+caption {
+    color: gray;
+    font-size: 1.5rem;
+    caption-side: top;
+}
+
+/* De tekstkleur van de header (eerste rij) is wit */
+/* De gebruikte achtergrondkleuren in de tabel zijn: table header: #96c21f */
 thead {
     color: white;
     background-color: #96c21f;
 }
 
+/* tekstkleur van de body van de tabel is zwart */
 tbody {
     color: black;
 }
 
-tr:nth-of-type(1)>td:first-child {
-    background-color: lightskyblue;
+/* Wanneer je hovert over de cel met de naam van een lector, dan moet deze een wiggle animatie doen */
+tbody > tr > td:hover {
+    animation-name: wiggle;
+    animation-duration: 1s;
 }
 
-tr:nth-of-type(3)>td:first-child {
-    background-color:  lightskyblue;
+/* ....maar dus niet op de andere cellen */
+tbody > tr:nth-child(1) > td:first-child, 
+tbody > tr:nth-child(3) > td:first-child {
+    animation: none;
 }
 
-tr td {
-    border: 2px solid lightgrey;
-    padding: 5px;
+/* De animatie doe je door afwisselend een kleine positieve en negatieve rotatie uit te voeren, 
+bijvoorbeeld: “0”, “-15deg”, “10deg”, “-10deg”, “6deg”, “-4deg”, “0” */
+@keyframes wiggle {
+    0% {
+        transform: rotate(0);
+    }
+
+    15% {
+        transform: rotate(-15deg);
+    }
+
+    30% {
+        transform: rotate(10deg);
+    }
+
+    45% {
+        transform: rotate(-10deg);
+    }
+
+    60% {
+        transform: rotate(6deg);
+    }
+
+    75% {
+        transform: rotate(-4deg);
+    }
 }
 
-thead {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: minmax(250px, auto);
+/* Opmaak formulier */
+select {
+    display: none;
+}
+
+/* Voeg de nodige CSS toe zodat de labels en de inputvelden naast elkaar staan. */
+#oosd2:checked + select, #web1:checked + select {
+    display: inline;
+}
+
+/* De inhoud van elke div (bijv. een label en een inputveld) komt op één horizontale lijn te staan. */
+/* Zorgt voor 5 pixels ruimte zowel boven als onder elke div */
+fieldset > div {
+    display: flex;
+    margin-block: 5px;
+}
+
+/* De labels hebben een breedte van 150 pixels. */
+label {
+    width: 150px;
 }

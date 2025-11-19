@@ -27,15 +27,26 @@ body {
   width: 40px;
   height: 40px;
   margin: 40px auto;
+  border-radius: 50%;
 }
+
+.grid-container:hover .box {
+  transform: scale(2);
+}
+
 .box1 {
-  background: rgb(60, 158, 148);
+  background: rgb(60, 158, 148, 40%);
+  transition-duration: 300ms;
 }
 
 .box2 {
-  background: rgb(60, 158, 148);
+  background: rgb(60, 158, 148, 70%);
+  transition-duration: 1000ms;
+  transition-delay: 300ms;
 }
 
 .box3 {
-  background: rgb(60, 158, 148);
+  background: rgb(60, 158, 148, 100%);
+  transition-duration: 2000ms;
+  transition-delay: 1300ms;
 }
