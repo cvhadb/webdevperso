@@ -1,0 +1,24 @@
+SELECT voornaam, achternaam FROM table 
+WHERE voornaam = 'ulysse'
+ORDER BY achternaam DESC
+LIMIT 1;
+
+<p>Ulysse is een kleine baby</p>
+
+
+.ulysse {
+    background-color: #FF0000;
+}
+
+
+for x in range(5):
+    y += x
+print(y)
+
+
+int y = 0;
+int n = 5;
+for (int x = 1; i <= n; ++i) {
+    y += x;
+}
+
