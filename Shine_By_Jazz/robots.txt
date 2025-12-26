@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /admin/
-Disallow: /private/
-Disallow: /temp/
-
-Sitemap: https://www.spraytan-kobenhavn.com/sitemap.xml
