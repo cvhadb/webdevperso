@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', sans-serif;
+    margin: 0;
+    /* Nav (ca. 50px) + Logo Shield (180px) = 230px. 
+       We voegen 20px extra toe voor ademruimte. */
+    padding-top: 350px; 
+    background-color: beige;
+    color: #8b766e;
+}
+
+.header-shield {
+    position: fixed;
+    top: 50px; /* Dit moet gelijk zijn aan de hoogte van je nav */
+    left: 0;
+    width: 100%;
+    height: 180px; 
+    background-color: beige;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Optioneel: een heel fijn schaduwtje om het logo los te laten komen bij scrollen */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+}
+
+.logo {
+    /* Height relative to the shield height */
+    height: 80%; 
+    aspect-ratio: 1 / 1; 
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #8b766e;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 50px; /* Garandeert dat de balk niet 'onzichtbaar' is */
+    color: #cccccc;
+    background-color: #343a40;
+    padding: 10px 14px;
+    z-index: 10001; /* Hoogste laag */
+}
+
+nav a {
+    color: #9a9a9a;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: aliceblue;
+}
+
+nav a.active {
+    color: white;
+}
+
+nav a.active:hover {
+    text-decoration: none;
+}
+
+nav ul {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #343a40;
+    position: absolute;
+    top: 100%; /* Plakt tegen de onderkant van de nav aan */
+    left: 0;
+    width: 100%;
+}
+
+nav a {
+    display: block;
+    padding: 3px 16px;
+    text-decoration: none;
+}
+
+/* in desktop view beperken we de breedte van het main-element
+  tot 640px en centreren we het main-element tussen de marges */
+main {
+    padding: 0 14px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2, p, address {
+    display: block !important;
+    width: 100% !important;
+    padding-inline: 20px; 
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    /* Removed padding-block-start to close the "huge gap" */
+    margin-top: 50px !important; 
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+input {
+    display: flex;
+    background-color: #8b766e;
+    color: white;
+    border: 0px solid black;
+    border-radius: 10px;
+    font-size: 1em;
+    padding: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    transition-duration: 200ms;
+}
+
+a {
+    text-decoration: none;
+    color: #8b766e;
+    font-weight: 700;   
+}
+
+input:hover {
+    transform: scale(1.05);
+    background-color: #a98c80;
+    cursor: pointer;
+}
+
+input:active {
+    transform: scale(1.05);
+    background-color: #cda797;
+    cursor: pointer;
+}
+
+li.hidden {
+    display: none;
+}
+
+/* HAMBURGER MENU */
+
+/* muisaanwijzer instellen */
+nav img#hamburger-icon {
+  cursor: pointer;
+}
+
+/* default verbergen we het menu */
+nav ul {
+  display: none;
+}
+
+nav label[for='menu-checkbox'] {
+    display: flex;
+    justify-content: flex-end; /* Duwt het icoon naar rechts */
+    width: 100%;
+    cursor: pointer;
+}
+
+#hamburger-icon {
+    width: 30px; /* Of de breedte die je al had */
+    height: auto;
+}
+
+/* als de checkbox checked is geven we het menu
+terug weer */
+nav #menu-checkbox:checked ~ ul {
+  display: block;
+}
+
+/* checkbox moet niet zichtbaar zijn */
+nav #menu-checkbox {
+  display: none;
+}
+
+.faq-section {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: left; /* FAQ leest fijner links uitgelijnd */
+}
+
+.faq-item {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+}
+
+.faq-item h3 {
+    color: #8b766e;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.faq-item p {
+    color: #8b766e;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left; /* Overschrijft de center-align van je main p */
+}
+
+footer {
+    margin-top: 70px;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    color: #8b766e;
+    background-color: transparent; /* Of beige als je een achtergrond wilt */
+    border-top: 1px solid #cda797;
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.05);
+}
+
+@media screen and (max-width: 575px) {
+    body {
+        padding-top: 260px; /* Ruimte voor mobiel logo + nav */
+    }
+
+    h1 {
+        margin-top: 0 !important;
+        font-size: 1.8rem;
+    }
+
+    /* Zorg dat de label (hamburger) rechts staat op mobiel */
+    nav label[for='menu-checkbox'] {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    /* Verberg de lijst standaard op mobiel */
+    nav ul {
+        display: none !important; 
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #343a40;
+    }
+
+    /* Toon menu als checkbox aan is */
+    nav #menu-checkbox:checked ~ ul {
+        display: block !important;
+    }
+}
+
+/* we plaatsen een 'break point" bij 576px */
+@media screen and (min-width: 576px) {
+    body {
+        /* Meer witruimte voor desktop zodat de main niet verstopt zit */
+        padding-top: 270px; 
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Iets groter op desktop */
+        margin-top: 0 !important;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Toon de lijst horizontaal op desktop */
+    nav ul {
+        display: flex !important;
+        position: static;
+        width: auto;
+        background-color: transparent;
+    }
+
+    nav li {
+        display: inline-block;
+        padding: 0 15px;
+    }
+
+    /* Verberg het hamburger icoon op desktop */
+    nav label[for='menu-checkbox'] {
+        display: none;
+    }
+}
+
+/* Desktop adjustments */
+@media (min-width: 768px) {
+    body {
+        padding-top: 270px;
+    }
+    .header-shield {
+        height: 180px;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    p {
+        max-width: 65ch; 
+    }
+}

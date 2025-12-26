@@ -20,8 +20,8 @@ div#box2 {
     max-width: 640px;
 }
 
-/* #box2 {
-    height: 20px;
+#box2 {
+    block-size: 20px;
     overflow:hidden;
-} */
+} 
 
