@@ -16,57 +16,56 @@ nav {
   gap: 10px;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "title board"
+    "stats board"
+    "score ctrls";
 }
 
 header {
-  grid-column: 1;
-  grid-row: 1;
+  grid-area: title;
 }
 
 #score {
-  grid-column: 1;
-  grid-row: 3;
+  grid-area: score;
   display: block grid;
   align-items: center;
   justify-items: center;
 }
 
 #stats {
-  grid-column: 1;
-  grid-row: 2;
+  grid-area: stats;
   align-self: start;
 }
 
-/* Board */
 main {
-  grid-column: 2;
-  grid-row: 1 / span 2;
+  grid-area: board;
 }
 
-/* Controls */
 nav {
-  grid-column: 2;
-  grid-row: 3;
+  grid-area: ctrls;
   justify-self: center;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation:portrait) {
   #container {
-    grid-template-areas:  "title stats"
-                          "score stats"
-                          "board board"
-                          "ctrls ctrls";
+    grid-template-areas:
+      "title stats"
+      "score stats"
+      "board board"
+      "ctrls ctrls";
   }
 }
 
-@media screen and (orientation: portrait) and(max-width:500px) {
+@media screen and (orientation:portrait) and (max-width:500px) {
   #container {
-    grid-template-areas:  "title score"
-                          "board board"
-                          "ctrls ctrls";
+    grid-template-areas:
+      "title score"
+      "board board"
+      "ctrls ctrls";
   }
 
-#stats {
-  display: none;
-}
+  #stats {
+    display: none;
+  }
 }

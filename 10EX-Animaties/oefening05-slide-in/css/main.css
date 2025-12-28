@@ -27,7 +27,7 @@ button {
 
 @keyframes my-slide-in {
   0% {
-    transform: translate(-150px, -250px);
+    transform: translate(-150px, -280px);
     opacity: 0;
     /* Alternatieve oplossing */
     /* background-color: rgba(102, 51, 153, 0); */
