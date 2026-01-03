@@ -147,6 +147,9 @@ textarea {
     justify-content: space-around;
   }
 
+/* voor een menu item dat precies zo breed als je tekst is. 
+Het wordt niet groter als er plek over is, maar krimp wel mee als het scherm te klein wordt.*/
+
   nav ul li {
     flex: 0 1 auto;
   }
