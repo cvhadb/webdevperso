@@ -2,6 +2,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* h1 wordt zichtbaar IN 5s. Bij laden is hoofding niet zichtbaar. Na 5s wel (forwards)  */
 h1 {
   font-family: 'Kablammo', sans-serif;
   text-align: center;

@@ -42,6 +42,7 @@ main {
     margin-top: 10px;
 }
 
+/* allemaal even breed */
 .image-row > div {
     flex: 1 0 0;
 }
@@ -137,7 +138,7 @@ select {
 }
 
 #oosd2:checked + select, #web1:checked + select {
-    display: inline;
+    display: block;
 }
 
 fieldset > div {
