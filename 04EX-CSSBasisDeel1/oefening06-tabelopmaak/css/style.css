@@ -18,9 +18,6 @@ Hou onder andere rekening met onderstaande richtlijnen:
       laatste rij:
         tekstkleur: #395870; 
         vet
-
-
-        DEZE OEFENING WAS NIET GOED !! HERMAKEN
 */
 
 body {
@@ -38,7 +35,7 @@ th, td {
   padding: 10px 15px;
 }
 
-thead { /* foutje : thead en niet th */
+thead { 
   background-color: #395870;
   color: white;
   font-size: 11px;
