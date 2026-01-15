@@ -45,3 +45,61 @@ button {
     /* background-color: rgba(102, 51, 153, 1); */
   }
 }
+
+
+
+
+
+/* 1. De Animation (De 'Choreografie') */
+@keyframes pulseer {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.cta-button {
+  background-color: #ff4757;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  
+  /* De animatie start direct en herhaalt oneindig */
+  animation: pulseer 2s infinite ease-in-out;
+
+  /* 2. De Transition (Voor de vloeiende overgang bij hover) */
+  /* We vertellen de browser: 'Als de transform verandert, doe daar 0.3s over' */
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s;
+}
+
+/* 3. De Transform (De verandering op hover) */
+.cta-button:hover {
+  /* We pauzeren de animatie zodat de hover-state stabiel is */
+  animation-play-state: paused;
+  
+  /* De nieuwe vorm/positie */
+  transform: scale(1.2) rotate(3deg);
+  background-color: #e84118;
+}
+
+
+
+/* Verberg de cadeau-selectie standaard */
+.gift-selection {
+  display: none;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
+/* Alleen als de radiobutton met id 'gold' is aangevinkt, 
+   toon dan de div die verderop in de container staat */
+#gold:checked ~ .gift-selection {
+  display: block;
+}
+
+/* Bonus: style het label van de gekozen radiobutton */
+input[type="radio"]:checked + label {
+  font-weight: bold;
+  color: gold;
+}
